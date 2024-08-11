@@ -11,10 +11,11 @@
 3. For easy maintenance, used Scenario-outline in feature file
 
 **Execution**: Open project in IDE, Select POM.XML. Open it in terminal. Enter the 'mvn clean install' and then 'mvn test' command
-  
+**Validation**: Hamcrest JAR is used to assert the response
 **Reporting** target/cucumber-html-report.html is used to generate reports automatically after execution. Just refresh the target folder under structure
 Attached the picture of a report below
 ![DevowelizerTest-Report](https://github.com/user-attachments/assets/74346b9c-d364-4992-911c-fcb74b2bdd4b)
+**test summary**: Out of 14 tests, 9 tests Failed , 5 tests Passed
 
 **My observations**:
 # Observation1: Some cases failing intermittently and throwing 500 internal server error. There is a reliability issue on API Service
@@ -32,4 +33,5 @@ If the ticketing system is available the observations can be logged i.e. Jira sy
 1. Not tested Non-ASCII characters in the entire case. No Requirement is mentioned.
 2. Puncuation mark '?' at the end of input, throwing 'IllegalArgumentException' but information on how to test this is not provided in requirement
 3. If Punctuation mark '?' exist in the middle of input, ignores any of its following letters whatever from the input
-4. No requirement mentioned the input size, I have tested 99 characters for a simple word but no issue 
+4. No requirement mentioned the input size, I have tested 99 characters for a simple word but no issue
+
